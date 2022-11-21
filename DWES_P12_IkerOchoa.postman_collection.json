@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "a76b21fc-0f30-4e49-9ecd-0453bf5247a6",
+		"name": "DWES_P12_IkerOchoa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "OneToOne",
+			"item": [
+				{
+					"name": "Post_registrer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "iker",
+									"type": "default"
+								},
+								{
+									"key": "lastname",
+									"value": "ochoa",
+									"type": "default"
+								},
+								{
+									"key": "biography",
+									"value": "estudio",
+									"type": "default"
+								},
+								{
+									"key": "website",
+									"value": "no",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "dam10.2022.jesuitas1@gmail.com\n",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_registrer",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Post_Notification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "notFollowedByMe",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "notFollowedToMe",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "newAccountsFollowingMe",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/notification",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notification"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "onetomany",
+			"item": [
+				{
+					"name": "Post_Tweets",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "message",
+									"value": "sdgfdsgdgsholaaaaa",
+									"type": "default"
+								},
+								{
+									"key": "users_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "newAccountsFollowingMe",
+									"value": "1",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/1/tweets",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"1",
+								"tweets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_tweets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "message",
+									"value": "sdgfdsgdgsholaaaaaa",
+									"type": "default"
+								},
+								{
+									"key": "users_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "newAccountsFollowingMe",
+									"value": "1",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tweet",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tweet"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "manytomany",
+			"item": [
+				{
+					"name": "Post_Tag",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "message",
+									"value": "sdgfdsgdgsholaaaaa",
+									"type": "default"
+								},
+								{
+									"key": "users_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "newAccountsFollowingMe",
+									"value": "1",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/1/tweets",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"1",
+								"tweets"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
